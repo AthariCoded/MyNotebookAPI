@@ -2,9 +2,8 @@ const express = require("express");
 
 const {
   noteFetch,
-  //createNote,
   deleteNote,
-  // updateNote,
+  updateNote,
   fetchNote,
 } = require("./controllers");
 
@@ -33,6 +32,6 @@ router.get("/", noteFetch);
 router.delete("/:noteId", deleteNote);
 
 // Update Route
-//router.put("/:noteId", updateNote);
+router.put("/:noteId", updateNote);
 
 module.exports = router;
